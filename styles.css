@@ -5,3 +5,284 @@ Author: Bridget LaPorte
 Design: Figma Wireframes - Assign 3/4
 Mobile first wedding website for GIT 480 - Senior Project
 ------------------------------------------------------------*/
+
+/* ------------- CSS NOTES-----------------------------------
+- Mobile first 
+- home page styles first, many styles will be hopefully reused for the other pages. 
+
+------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------
+Modern CSS Reset by Josh Comeau https://www.joshwcomeau.com/css/custom-css-reset/
+-------------------------------------------------------------*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------
+root styles from the figma wireframe and planning
+-------------------------------------------------------------*/
+
+:root{
+    --soft-white: #FEFDFD;
+    --near-black: #060502;
+    --footer-olive: #605A48;
+    --gray-brown: #605A54;
+    --warm-taupe: #88807B;
+    --olive-script: #6D694B;
+    --brick-brown: #6C342A;
+    --deep-russet: #57302A;
+    --form-stone: #E1DFDA;
+    --light-stone: #DBD6CA;
+    --sage-olive: #B1AD7D;
+    --gold-accent: #D7BB68;
+    --pale-yellow: #E5D9A9;
+    --selected-gray: #73716F;
+    --muted-button: #ADA8A3;
+    --deep-olive: #302C24;
+
+    --font-body: "Montserrat", sans-serif;
+    --font-display: "Bodoni Moda", serif;
+    --font-script: "Pinyon Script", cursive;
+    --font-editorial: "Cormorant Garamond", serif;
+}
+
+
+
+
+/*-----------------------------------------------------------
+Global styles
+-------------------------------------------------------------*/
+body{
+    background-color: var(--soft-white);
+    color: var(--near-black);
+    font-family: var(--font-body);
+}
+
+a{
+    color: inherit;
+}
+
+.skip-link{
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    padding: 10px;
+    background-color: var(--near-black);
+    color: white;
+}
+
+.skip-link:focus{
+    top: 10px;
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------
+Header and nav - mobile first
+-------------------------------------------------------------*/
+.site-header{
+    padding: 15px;
+    background-color: var(--soft-white);
+}
+
+.site-logo{
+    display: block;
+    margin-bottom: 15px;
+    font-family: var(--font-script);
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.site-nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-link{
+    display: inline-block;
+    padding: 10px 12px;
+    border: 1px solid var(--light-stone);
+    border-radius: 20px;
+    font-size: 11px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-link[aria-current="page"]{
+    background-color: var(--selected-gray);
+    border-bottom: 2px solid var(--gold-accent);
+    color: white;
+}
+
+.rsvp-nav{
+    background-color: var(--near-black);
+    color: white;
+}
+
+
+
+
+
+
+/*-----------------------------------------------------------
+Home hero
+-------------------------------------------------------------*/
+.home-hero{
+    position: relative;
+}
+
+.hero-image{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero-content{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 4px var(--near-black);
+}
+
+.hero-title{
+    font-family: var(--font-script);
+    font-size: 54px;
+    font-weight: 400;
+}
+
+.hero-date{
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------
+Home quick links under image - mobile
+-------------------------------------------------------------*/
+.home-quick-links {
+    background-color: var(--warm-taupe);
+}
+
+.quick-link{
+    display: flex;
+    gap: 12px;
+    padding: 20px 15px;
+    border-bottom: 1px solid var(--light-stone);
+    color: white;
+    text-decoration: none;
+}
+
+.quick-link-number{
+    color: var(--gold-accent);
+    font-family: var(--font-display);
+    font-size: 20px;
+}
+
+.quick-link-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.quick-link-label{
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.quick-link-title{
+    font-family: var(--font-display);
+    font-size: 24px;
+}
+
+.quick-link-description{
+    font-size: 12px;
+}
+
+.quick-link-arrow{
+    color: var(--gold-accent);
+    font-size: 20px;
+}
