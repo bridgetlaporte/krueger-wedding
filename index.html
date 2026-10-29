@@ -3,43 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Kruegers | Cole & Bridget</title>
+    <title>The Krueger Wedding | Cole &amp; Bridget</title>
     <meta name="description" content="Celebrate with Cole and Bridget. Explore our story, wedding details, photos, registry, and RSVP information.">
+    
     <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <!-- Fonts from Google - Bodoni Moda, Cormorant Garamond, Montserrat, Pinyon Script -->
+    <!-- Fonts from Google  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&amp;family=Cormorant+Garamond:ital,wght@0,400;1,400&amp;family=Montserrat:wght@400;500;600;700&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600&amp;family=Montserrat:wght@400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> 
 
 </head>
 
 
-<body>
+<body class="page page-home" data-page="index">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
-        <a class="site-logo" href="index.html">The Kruegers</a>
+    <header class="site-header" data-header>
+        <div class="header-inner">
 
-        <nav class="site-nav" aria-label="Main navigation">
-            <a class="nav-link" href="index.html" aria-current="page">Home</a>
-            <a class="nav-link" href="our-story.html">Our Story</a>
-            <a class="nav-link" href="gallery.html">Gallery</a>
-            <a class="nav-link" href="registry.html">Registry</a>
-            <a class="nav-link" href="details.html">Details</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-            <a class="nav-link rsvp-nav" href="rsvp.html">RSVP</a>
-        </nav>  
+            <a class="site-logo" href="index.html" aria-label="home">
+                <img src="images/favicon.png" alt="" width="40" height="40">
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="desktop-nav" aria-label="Primary navigation">
+                <a class="nav-link" href="index.html" aria-current="page">Home</a>
+                <a class="nav-link" href="our-story.html">Our Story</a>
+                <a class="nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-link" href="registry.html">Registry</a>
+                <a class="nav-link" href="details.html">Details</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link rsvp-nav" href="rsvp.html">RSVP</a>
+
+            </nav>
+
+            <!-- Mobile nav -->
+            <div class="mobile-options">
+                <a class="mobile-rsvp" href="rsvp.html">RSVP</a>
+
+                <button class="menu-toggle"
+                    type="button" aria-controls="mobile-menu" aria-expanded="false">
+
+                    <span class="sr-only">Open Menu</span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+            </div>
+
+        </div>
 
     </header>
 
+    <!-- Mobile Navigation - has to be outside the header for popup to work-->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
 
+            <p class="eyebrow mobile-menu-kicker">Cole &amp; Bridget</p>
 
+            <nav aria-label="Mobile navigation">
 
+                <a class="nav-link" href="index.html" aria-current="page">Home</a>
+                <a class="nav-link" href="our-story.html">Our Story</a>
+                <a class="nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-link" href="registry.html">Registry</a>
+                <a class="nav-link" href="details.html">Details</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link rsvp-nav" href="rsvp.html">RSVP</a>
 
+            </nav>
 
+            <div class="mobile-menu-foot">
+                <span>THE KRUEGERS</span>
+                <span>WITH LOVE</span>
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -55,44 +100,6 @@
 
         </section>
 
-        <section class="home-quick-links" aria-label="Quick wedding information">
-
-            <!-- First Quick Link -->
-            <a class="quick-link" href="details.html">
-                <span class="quick-link-number" aria-hidden="true">01</span>
-                <span class="quick-link-content">
-                    <span class="quick-link-label">About the Wedding</span>
-                    <span class="quick-link-title">Event Details</span>
-                    <span class="quick-link-description">Information and FAQs.</span>
-                </span>
-
-                <span class="quick-link-arrow" aria-hidden="true">↗</span>
-            </a>
-
-            <!-- Second Quick Link -->
-            <a class="quick-link" href="rsvp.html">
-                <span class="quick-link-number" aria-hidden="true">02</span>
-                <span class="quick-link-content">
-                    <span class="quick-link-label">Kindly Reply</span>
-                    <span class="quick-link-title">RSVP</span>
-                    <span class="quick-link-description">Will you join us?</span>
-                </span>
-
-                <span class="quick-link-arrow" aria-hidden="true">↗</span>
-            </a>
-
-            <!-- Third Quick Link -->
-            <a class="quick-link" href="registry.html">
-                <span class="quick-link-number" aria-hidden="true">03</span>
-                <span class="quick-link-content">
-                    <span class="quick-link-label">If You Wish</span>
-                    <span class="quick-link-title">Registry</span>
-                    <span class="quick-link-description">Your presence is the greatest gift.</span>
-                </span>
-
-                <span class="quick-link-arrow" aria-hidden="true">↗</span>
-            </a>
-        </section>
 
 
 
