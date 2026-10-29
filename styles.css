@@ -9,6 +9,7 @@ Mobile first wedding website for GIT 480 - Senior Project
 /* ------------- CSS NOTES-----------------------------------
 - Mobile first 
 - home page styles first, many styles will be hopefully reused for the other pages. 
+- responsive media grouped, organized bt size. 
 
 ------------------------------------------------------------*/
 
@@ -133,6 +134,7 @@ Global styles
 html{
     scroll-behavior: smooth;
     background-color: var(--soft-white);
+    scrollbar-gutter: stable; /*stops the weird jump to the left*/
 }
 
 body{
@@ -410,7 +412,86 @@ Mobile Navigation Menu POPUP, NOT BUTTON
 
 
 /*-----------------------------------------------------------
-Tablet header
+Home Hero - mobile
+-------------------------------------------------------------*/
+
+.home-hero{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background-color: var(--stone-nude);
+}
+
+.hero-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Color photo hidden */
+.hero-color{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Show photo hover */
+.home-hero:hover .hero-color{
+    opacity: 1;
+}
+
+/* text over hero */
+.hero-content{
+    position: absolute;
+    top: 47%;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    transform: translateY(-50%);
+    text-align: center;
+    color: var(--soft-white);
+    text-shadow: 0 3px 7px rgba(0,0,0,.15);
+}
+
+.hero-title{
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: clamp(48px, 17vw, 68px);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.hero-date{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------
+
+Responsive Styles 
+
+-------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------
+Tablet 
 -------------------------------------------------------------*/
 @media (min-width: 700px){
     :root{
@@ -421,11 +502,24 @@ Tablet header
         padding: 0 1.5rem;
     }
 
+    .home-hero{
+        height: 680px;
+    }
+
+    .hero-title{
+        font-size: 110px;
+    }
+
+    .hero-date{
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
 }
 
 
 /*-----------------------------------------------------------
-Desktop header
+Desktop 
 -------------------------------------------------------------*/
 @media (min-width: 1120px){
 
@@ -505,11 +599,28 @@ Desktop header
         width: 40px;
         height: 40px;
     }
+
+    .home-hero{
+        height: 853px;
+    }
+
+    .hero-content{
+        top: 45%;
+    }
+
+    .hero-title{
+        font-size: 150px;
+    }
+
+    .hero-date{
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
 }
 
 
 /*-----------------------------------------------------------
-Desktop
+Desktop XL
 -------------------------------------------------------------*/
 @media (min-width: 1500px){
     .desktop-nav .nav-link{
