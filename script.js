@@ -111,5 +111,41 @@ if(galleryButtons.length > 0 && lightbox){
     lightbox.addEventListener("close", function(){
         openedPhotoButton.focus();
     });
+
 }
+
+
+// Gallery page - still uses lightbox above but splits photos into page categories ------------------------------
+const engagementTab = document.querySelector("#engagement-tab");
+const weddingTab = document.querySelector("#wedding-tab");
+const engagementGallery = document.querySelector("#engagement-gallery");
+const weddingGallery = document.querySelector("#wedding-gallery");
+
+if(engagementTab && weddingTab && engagementGallery && weddingGallery){
+
+    // Shows engagement photos
+    engagementTab.addEventListener("click", function(){
+        engagementGallery.hidden = false;
+        weddingGallery.hidden = true;
+
+        engagementTab.classList.add("active");
+        weddingTab.classList.remove("active");
+
+        engagementTab.setAttribute("aria-pressed", "true");
+        weddingTab.setAttribute("aria-pressed", "false");
+    });
+
+    // Shows wedding photos
+    weddingTab.addEventListener("click", function(){
+        engagementGallery.hidden = true;
+        weddingGallery.hidden = false;
+
+        weddingTab.classList.add("active");
+        engagementTab.classList.remove("active");
+
+        weddingTab.setAttribute("aria-pressed", "true");
+        engagementTab.setAttribute("aria-pressed", "false");
+    });
+}
+
 
