@@ -157,7 +157,7 @@ p{
 h1, h2, h3{
     font-family: var(--font-display);
     font-weight: 400;
-    line-height: 0.98;
+    line-height: 1;
 }
 
 h1{
@@ -196,9 +196,11 @@ h2{
 
 
 
-/*-----------------------------------------------------------
+/*-------------------------------------------------------------------------------
+
 Header and nav - mobile first
--------------------------------------------------------------*/
+
+----------------------------------------------------------------------------------*/
 
 /* Mobile header */
 .site-header{
@@ -316,7 +318,7 @@ body.menu-open{
 
 
 /*-----------------------------------------------------------
-Mobile Navigation Menu POPUP, NOT BUTTON 
+Mobile Nav Menu POPUP, NOT BUTTON 
 -------------------------------------------------------------*/
 .mobile-menu{
     position: fixed;
@@ -411,6 +413,14 @@ Mobile Navigation Menu POPUP, NOT BUTTON
 
 
 
+/*----------------------------------------------------------------------------------------------------------
+
+Home 
+
+
+----------------------------------------------------------------------------------------------------------*/
+
+
 /*-----------------------------------------------------------
 Home Hero - mobile
 -------------------------------------------------------------*/
@@ -450,12 +460,12 @@ Home Hero - mobile
     /* Black and whte until hover */
     filter: grayscale(1) contrast(1.01) brightness(1.03);
     transform: scale(1.02);
-    transition: filter .9s ease, transform 1.3s ease;
+    transition: filter 0.9s ease, transform 1.3s ease;
 }
 
 /* changes color on hover */
 .home-hero:hover .hero-image{
-    filter: grayscale(.42) contrast(1.01) brightness(1.01) saturate(1.2);
+    filter: grayscale(0.42) contrast(1.01) brightness(1.01) saturate(1.2);
     transform: scale(1.055);
 }
 
@@ -469,7 +479,7 @@ Home Hero - mobile
     transform: translateY(-50%);
     text-align: center;
     color: var(--soft-white);
-    text-shadow: 0 4px 10px rgba(0,0,0,.3);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .hero-title{
@@ -508,7 +518,7 @@ home - quick Links
     align-items: center;
     gap: 1rem;
     min-height: 115px;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     border-bottom: 1px solid var(--soft-white);
     color: inherit;
     text-decoration: none;
@@ -567,17 +577,198 @@ home - quick Links
 
 
 
+/*-----------------------------------------------------------
+home - Our Story
+-------------------------------------------------------------*/
+.home-story{
+    display: grid;
+    gap: 2rem;
+    padding: 4.25rem 1rem;
+    background-color: var(--soft-white);
+    color: var(--near-black);
+}
 
+/* Story photo */
+.story-photo{
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+}
 
+.story-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    filter: grayscale(1);
+    transition: filter 0.55s ease, transform .8s ease;
+}
 
+.story-photo:hover img{
+    filter: grayscale( 0.55);
+    transform: scale(1.025);
+}
+
+/* Story text */
+.story-content{
+    align-self: center;
+}
+
+.story-kicker{
+    margin-bottom: 0.5rem;
+    color: var(--brick-brown);
+    font-size: 0.7rem;
+}
+
+/* Bodoni  */
+.story-title{
+    margin: 0.5rem 0 1.5rem;
+    font-size: clamp(2rem, 10vw, 5rem);
+    line-height: 1;
+    color: var(--near-black);
+}
+
+.story-script{
+    display: block;
+    font-family: var(--font-script);
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 0.85;
+    color: #6D695B;
+}
+
+/* paragraph */
+.story-description{
+    max-width: 36rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-editorial);
+    font-size: 1.1rem;
+    line-height: 1.45;
+    color: var(--near-black);
+}
+
+.story-link{
+    display: inline-block;
+    position: relative;
+    margin-top: 1rem;
+    padding-bottom: .3rem;
+    color: var(--olive-brown);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* underline */
+.story-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--brick-brown);
+}
+
+.story-link:hover{
+    color: var(--brick-brown);
+}
 
 
 
 /*-----------------------------------------------------------
+home - Wedding Details
+-------------------------------------------------------------*/
+.home-details{
+    display: grid;
+    gap: 2rem;
+    padding: 4.25rem 1rem;
+    background-color: #88807B;
+    color: var(--soft-white);
+}
+
+.details-content{
+    align-self: center;
+}
+
+.details-kicker{
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.details-title{
+    margin: 0.9rem 0 1.25rem;
+    font-size: clamp(2.25rem, 10vw, 5rem);
+    line-height: 1;
+}
+
+.details-script{
+    display: block;
+    font-family: var(--font-script);
+    font-size: 1.17em;
+    font-weight: 400;
+    line-height: 0.8;
+    color: #E5D9A9;
+}
+
+.details-description{
+    max-width: 34rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-editorial);
+    font-size: 1.1rem;
+    line-height: 1.55;
+}
+
+.details-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 46px;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid var(--soft-white);
+    color: var(--soft-white);
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.details-link:hover{
+    background-color: rgba(255,255,255,.12);
+}
+
+.details-photo{
+    height: 430px;
+    overflow: hidden;
+}
+
+.details-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.details-photo:hover img{
+    transform: scale(1.025);
+}
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------
 
 Responsive Styles 
 
--------------------------------------------------------------*/
+-------------------------------------------------------------------------------------------------------------*/
 
 
 /*-----------------------------------------------------------
@@ -634,6 +825,40 @@ Tablet
         font-size: .7rem;
     }
 
+
+    /* home - Our Story */
+    .home-story{
+        grid-template-columns: 1fr 1fr;
+        padding: 5.5rem 2rem;
+    }
+
+    .story-photo{
+        height: auto;
+        min-height: 520px;
+    }
+
+    .story-content{
+        padding: 2rem;
+    }
+
+
+    /* home - Wedding Details */
+    .home-details{
+        grid-template-columns: 0.85fr 1.15fr;
+        padding: 5.5rem 2rem;
+    }
+
+    .details-content{
+        padding: 2rem 1rem;
+    }
+
+    .details-photo{
+        height: auto;
+        min-height: 500px;
+    }
+
+
+
 }
 
 
@@ -650,6 +875,9 @@ Desktop
         padding: 0 2rem;
     }
 
+    
+    
+    
     /* unhides desktop navigation */
     .desktop-nav{
         display: flex;
@@ -658,6 +886,10 @@ Desktop
         gap: 0.4rem;
     }
 
+    
+    
+    
+    
     /* navigation buttons */
     .desktop-nav .nav-link{
         display: inline-flex;
@@ -687,6 +919,10 @@ Desktop
         transform: translateY(-1px);
     }
 
+    
+    
+    
+    
     /* underline selected page */
     .desktop-nav .nav-link[aria-current="page"]{
         box-shadow: inset 0 -2px 0 var(--gold-yellow);
@@ -759,6 +995,46 @@ Desktop
     .quick-link-description{
         font-size: .75rem;
     }
+
+
+    /* home - Our Story */
+    .home-story{
+        grid-template-columns: 1.1fr .9fr;
+        gap: clamp(4rem, 9vw, 10rem);
+        padding: 7rem clamp(3rem, 6vw, 7rem);
+    }
+
+    .story-photo{
+        min-height: 760px;
+    }
+
+
+
+
+
+
+    /* home - Wedding Details */
+    .home-details{
+        grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+        gap: 3rem;
+        padding: 7rem clamp(3rem, 6vw, 7rem);
+    }
+
+    .details-content{
+        padding-left: 0;
+    }
+
+    .details-title{
+        font-size: clamp(3rem, 4.5vw, 4rem);
+    }
+
+    .details-photo{
+        height: auto;
+        min-height: 720px;
+    }
+
+
+
 }
 
 
