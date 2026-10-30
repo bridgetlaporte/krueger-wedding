@@ -1145,6 +1145,195 @@ Footer
 
 
 
+/*-----------------------------------------------------------
+
+Gallery Page
+
+-------------------------------------------------------------*/
+.gallery-page-intro{
+    display: grid;
+    gap: 2rem;
+    padding: 4.25rem 1rem 2.5rem;
+    background-color: var(--soft-white);
+}
+
+.gallery-page-kicker{
+    margin-bottom: 1.5rem;
+    color: var(--brick-brown);
+    font-size: 0.7rem;
+    margin-top: -1rem;
+}
+
+.gallery-page-title{
+    font-size: clamp(2.75rem, 11vw, 5rem);
+    line-height: 1;
+}
+
+.gallery-page-title span{
+    display: block;
+    font-family: var(--font-script);
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 0.9;
+    color: #6D695B;
+}
+
+.gallery-page-info{
+    align-self: end;
+}
+
+.gallery-page-description{
+    max-width: 50rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.gallery-tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.gallery-tab{
+    min-height: 46px;
+    padding: 0.8rem 1.25rem;
+    border: 1px solid var(--stone-nude);
+    border-radius: 10px;
+    background-color: var(--soft-white);
+    color: var(--near-black);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.gallery-tab:hover{
+    background-color: var(--stone-nude);
+}
+
+.gallery-tab.active, .gallery-tab.active:hover{
+    background-color: #787573;
+    border-color: #787573;
+    box-shadow: inset 0 -2px 0 var(--gold-yellow);
+    color: var(--soft-white);
+}
+
+.gallery-tab:focus-visible{
+    outline: 2px solid var(--brick-brown);
+    outline-offset: 3px;
+}
+
+
+.gallery-page-grid{
+    columns: 2;
+    column-gap: 0.5rem;
+    margin: 0 1rem;
+    padding: 1.5rem 0 4rem;
+    border-top: 1px solid var(--stone-nude);
+    border-bottom: 1px solid var(--stone-nude);
+    background-color: var(--soft-white);
+}
+
+.gallery-page-grid .gallery-page-tile{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.65rem;
+    padding: 0;
+    border: none;
+    break-inside: avoid;
+    vertical-align: top;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-page-grid .gallery-page-tile img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.gallery-page-grid .gallery-page-tile:hover img{
+    transform: scale(1.02);
+}
+
+.gallery-page-grid[hidden], .gallery-wedding[hidden]{
+    display: none;
+}
+
+.gallery-wedding{
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.gallery-wedding h2{
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.25rem, 8vw, 4rem);
+}
+
+.gallery-wedding p{
+    max-width: 30rem;
+    margin: auto;
+    font-family: var(--font-editorial);
+    font-size: 1.25rem;
+}
+
+
+/*-----------------------------------------------------------
+Gallery - more to See
+-------------------------------------------------------------*/
+.gallery-more{
+    margin: 0 1rem;
+    padding: 3rem 0 5rem;
+}
+
+.gallery-more-kicker{
+    margin-bottom: 1.5rem;
+    color: var(--brick-brown);
+    font-size: 0.7rem;
+}
+
+.gallery-more-description{
+    max-width: 34rem;
+    margin-bottom: 2rem;
+    color: var(--olive-gray);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.gallery-back{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid var(--olive-brown);
+    border-radius: 5px;
+    color: var(--olive-brown);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.gallery-back:hover{
+    background-color: var(--olive-brown);
+    color: var(--soft-white);
+}
+
+
+
+
 
 
 
@@ -1210,6 +1399,7 @@ Tablet
     }
 
 
+    /* home --------------------------------------------------------- */
     /* home - Our Story */
     .home-story{
         grid-template-columns: 1fr 1fr;
@@ -1272,6 +1462,38 @@ Tablet
         flex-direction: row;
         justify-content: space-between;
     }
+
+
+
+    /* Gallery Page ---------------------------------------------*/
+    .gallery-page-intro{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 5.5rem 2rem 3rem;
+    }
+
+    .gallery-page-grid{
+        columns: 3;
+        column-gap: 0.8rem;
+        padding: 2rem 2rem 5rem;
+    }
+
+    .gallery-page-grid .gallery-page-tile{
+        margin-bottom: 0.8rem;
+    }
+
+    .gallery-wedding{
+        padding: 6rem 2rem;
+    }
+
+    .gallery-more{
+        margin: 0 2rem;
+        padding: 3rem 0 6rem;
+    }
+    .gallery-page-kicker {
+        margin-top: -3rem;
+    }
+
 
 
 
@@ -1476,10 +1698,43 @@ Desktop
         padding: 5rem 4rem;
     }
 
-    /* Footer */
+    /* Footer ---------------------------------------------*/
     .site-footer{
         padding: 4.5rem clamp(3rem, 6vw, 7rem) 1.25rem;
     }
+
+
+
+    /* Gallery Page ---------------------------------------------*/
+    .gallery-page-intro{
+        gap: 2rem;
+        padding: 7rem clamp(3rem, 6vw, 7rem) 3.5rem;
+    }
+
+    .gallery-page-title{
+        font-size: clamp(4rem, 5vw, 6rem);
+        margin-top: 1rem;
+    }
+
+    .gallery-page-grid{
+        columns: 4;
+        column-gap: 0.9rem;
+        padding: 2.5rem clamp(3rem, 6vw, 7rem) 7rem;
+    }
+
+    .gallery-page-grid .gallery-page-tile{
+        margin-bottom: 0.9rem;
+    }
+
+    .gallery-more{
+        margin: 0 clamp(3rem, 6vw, 7rem);
+        padding: 3.5rem 0 7rem;
+    }
+
+    .gallery-page-kicker {
+        margin-top: -4rem;
+    }
+
 
 
 
