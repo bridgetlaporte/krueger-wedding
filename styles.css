@@ -648,11 +648,14 @@ home - Our Story
     color: var(--near-black);
 }
 
+
 .story-link{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     position: relative;
     margin-top: 1rem;
-    padding-bottom: .3rem;
+    padding-bottom: 0.3rem;
     color: var(--olive-brown);
     font-family: var(--font-sans);
     font-size: 0.7rem;
@@ -660,6 +663,7 @@ home - Our Story
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
+    transition: color 0.25s ease;
 }
 
 /* underline */
@@ -669,13 +673,23 @@ home - Our Story
     left: 0;
     bottom: 0;
     width: 2rem;
-    height: 2px;
+    height: 1px;
     background-color: var(--brick-brown);
+    transition: width 0.25s ease;
 }
 
-.story-link:hover{
-    color: var(--brick-brown);
+.story-link span{
+    transition: transform 0.25s ease;
 }
+
+.story-link:hover::after, .story-link:focus-visible::after{
+    width: 100%;
+}
+
+.story-link:hover span, .story-link:focus-visible span{
+    transform: translateX(5px);
+}
+
 
 
 
@@ -722,24 +736,44 @@ home - Wedding Details
     line-height: 1.55;
 }
 
+
 .details-link{
     display: inline-flex;
     align-items: center;
     gap: 0.65rem;
+    position: relative;
     min-height: 46px;
-    padding: 0.85rem 1.25rem;
-    border: 1px solid var(--soft-white);
     color: var(--soft-white);
     font-family: var(--font-sans);
     font-size: 0.65rem;
     letter-spacing: 0.14em;
     text-decoration: none;
     text-transform: uppercase;
+    transition: background-color 0.25s ease;
 }
 
-.details-link:hover{
-    background-color: rgba(255,255,255,.12);
+.details-link::after{
+    content: "";
+    position: absolute;
+    bottom: 0.4rem;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--soft-white);
+    transition: width 0.25s ease;
 }
+
+.details-link span{
+    transition: transform 0.25s ease;
+}
+
+.details-link:hover::after, .details-link:focus-visible::after{
+    width: 100%;
+}
+
+.details-link:hover span, .details-link:focus-visible span{
+    transform: translateX(5px);
+}
+
 
 .details-photo{
     height: 430px;
@@ -818,10 +852,6 @@ home - Photo Gallery
 
 .gallery-link span{
     transition: transform 0.25s ease;
-}
-
-.gallery-link:hover{
-    color: var(--brick-brown);
 }
 
 .gallery-link:hover::after{
@@ -912,13 +942,6 @@ home - Photo Gallery
     max-width: 100%;
     max-height: 75vh;
     object-fit: contain;
-}
-
-.lightbox-caption{
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
 }
 
 .image-lightbox button{

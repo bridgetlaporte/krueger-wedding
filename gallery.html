@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | The Kruegers</title>
+    <meta name="description" content="Browse the engagement photos of Cole and Bridget.Wedding photographs to come after our big day!">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Fonts from Google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600&amp;family=Montserrat:wght@400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+
+<body class="page page-gallery" data-page="gallery">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" data-header>
+        <div class="header-inner">
+
+            <a class="site-logo" href="index.html" aria-label="home">
+                <img src="images/favicon.png" alt="" width="40" height="40">
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="desktop-nav" aria-label="Primary navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="our-story.html">Our Story</a>
+                <a class="nav-link" href="gallery.html" aria-current="page">Gallery</a>
+                <a class="nav-link" href="registry.html">Registry</a>
+                <a class="nav-link" href="details.html">Details</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link rsvp-nav" href="rsvp.html">RSVP</a>
+            </nav>
+
+            <!-- Mobile nav -->
+            <div class="mobile-options">
+                <a class="mobile-rsvp" href="rsvp.html">RSVP</a>
+
+                <button class="menu-toggle"
+                    type="button" aria-controls="mobile-menu" aria-expanded="false">
+
+                    <span class="sr-only">Open Menu</span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Mobile Navigation - has to be outside the header for popup to work-->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+
+            <p class="eyebrow mobile-menu-kicker">Cole &amp; Bridget</p>
+
+            <nav aria-label="Mobile navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="our-story.html">Our Story</a>
+                <a class="nav-link" href="gallery.html" aria-current="page">Gallery</a>
+                <a class="nav-link" href="registry.html">Registry</a>
+                <a class="nav-link" href="details.html">Details</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link rsvp-nav" href="rsvp.html">RSVP</a>
+            </nav>
+
+            <div class="mobile-menu-foot">
+                <span>THE KRUEGERS</span>
+                <span>WITH LOVE</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <main id="main-content">
+        <!-- Photo Gallery -->
+        <section class="gallery-page-intro" id="gallery-intro" aria-labelledby="gallery-page-title">
+
+            <div class="gallery-page-heading">
+                <p class="eyebrow gallery-page-kicker">Photo Gallery</p>
+                <h1 class="gallery-page-title" id="gallery-page-title">Us, captured <span>on camera.</span></h1>
+            </div>
+
+            <div class="gallery-page-info">
+                <p class="gallery-page-description">A mix of pictures taken in SLO, where we attended college, and day of proposal photographs from the big moment in Seascape. Click on any image to see more. Check back for wedding photographs following the wedding!</p>
+
+                <div class="gallery-tabs" aria-label="Photo categories">
+                    <button class="gallery-tab active" id="engagement-tab" type="button" aria-pressed="true">Engagement</button>
+                    <button class="gallery-tab" id="wedding-tab" type="button" aria-pressed="false">Wedding</button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Engagement photos -->
+        <section class="gallery-page-grid" id="engagement-gallery" aria-label="Engagement photographs">
+
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 1"><img src="images/IMG_1796.jpg" alt="Cole and Bridget — Post-proposal on the beach" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 2"><img src="images/IMG_1793.jpg" alt="Cole and Bridget — Post-proposal on the beach cheersing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 3"><img src="images/IMG_1717.JPG" alt="Cole and Bridget — Walking on the beach holding hands" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 4"><img src="images/IMG_1721.JPG" alt="Cole and Bridget — Walking on the beach holding hands and laughing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 5"><img src="images/IMG_1715.JPG" alt="Cole and Bridget — In front of morro rock in the grass" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 6"><img src="images/IMG_1787.jpg" alt="Cole and Bridget — Looking at one another" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 7"><img src="images/IMG_1730.JPG" alt="Cole and Bridget — Dancing on the beach" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 8"><img src="images/IMG_1806.jpg" alt="Cole and Bridget — Sitting in the sand" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 9"><img src="images/IMG_1789.jpg" alt="Cole and Bridget — Pouring champagne" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 10"><img src="images/IMG_1788.jpg" alt="Cole and Bridget — On the beach together" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 11"><img src="images/IMG_1749.JPG" alt="Cole and Bridget — Looking at eachother in the grass" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 12"><img src="images/IMG_1764.JPG" alt="Cole and Bridget — Cole kissing Bridgets cheek" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 13"><img src="images/IMG_1787 3.jpg" alt="Cole and Bridget — looking at one another" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 14"><img src="images/IMG_1734.JPG" alt="Cole and Bridget — In the grass" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 15"><img src="images/IMG_1779.JPG" alt="Cole and Bridget — walking on the beach" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 16"><img src="images/IMG_1735.JPG" alt="Cole and Bridget — in the grass with birds flying above" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 17"><img src="images/IMG_1808.jpg" alt="Cole and Bridget — Proposal moment" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 18"><img src="images/IMG_1770.JPG" alt="Cole and Bridget — Beach engagement moment" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 19"><img src="images/IMG_1745.JPG" alt="Cole and Bridget — In the morro grass" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 20"><img src="images/IMG_1802 2.jpg" alt="Cole and Bridget — Proposal" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 21"><img src="images/IMG_1761.JPG" alt="Cole and Bridget — kissing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 22"><img src="images/IMG_1790.jpg" alt="Cole and Bridget — smiling at one another" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 23"><img src="images/IMG_1758.JPG" alt="Cole and Bridget — Walking in morro" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 24"><img src="images/IMG_1777.JPG" alt="Cole and Bridget — Beach photo" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 25"><img src="images/IMG_1377.jpg" alt="Cole and Bridget — Hugging after proposing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 26"><img src="images/IMG_1755.JPG" alt="Cole and Bridget — Hugging on the beach" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 27"><img src="images/IMG_1754.JPG" alt="Cole and Bridget — Holding hands" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 28"><img src="images/IMG_1767.JPG" alt="Cole and Bridget — Hugging" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 29"><img src="images/IMG_1705.JPG" alt="Cole and Bridget — Dancing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 30"><img src="images/IMG_1715 2.JPG" alt="Cole and Bridget — Dancing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 31"><img src="images/IMG_1794.jpg" alt="Cole and Bridget — Kissing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 32"><img src="images/IMG_1723.JPG" alt="Cole and Bridget — Hugging Bridget" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 33"><img src="images/IMG_1708.JPG" alt="Cole and Bridget — Out of focus" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 34"><img src="images/IMG_1738.JPG" alt="Cole and Bridget — Hugging" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 35"><img src="images/IMG_1769.JPG" alt="Cole and Bridget — Laughing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 36"><img src="images/IMG_1795.jpg" alt="Cole and Bridget — Walking together" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 37"><img src="images/IMG_1760 2.JPG" alt="Cole and Bridget — In the grass" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 38"><img src="images/IMG_1773 2.JPG" alt="Cole and Bridget — Heads together" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 39"><img src="images/IMG_1765.JPG" alt="Cole and Bridget — Looking at one another" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 40"><img src="images/IMG_1870.jpeg" alt="Cole and Bridget — Cheers" width="2400" height="1558" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 41"><img src="images/IMG_1763.JPG" alt="Cole and Bridget — Dancing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 42"><img src="images/IMG_1756.JPG" alt="Cole and Bridget — In front of rocks" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 43"><img src="images/IMG_1732.JPG" alt="Cole and Bridget — In the grass" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 44"><img src="images/IMG_1740.JPG" alt="Cole and Bridget — Looking at each other" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 45"><img src="images/IMG_1760.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 46"><img src="images/IMG_1774.JPG" alt="Cole and Bridget — Eye contact" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 47"><img src="images/IMG_1284.JPG" alt="Cole and Bridget — Champagne toast" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 48"><img src="images/IMG_1709.JPG" alt="Cole and Bridget — Hugging" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 49"><img src="images/IMG_1772 2.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 50"><img src="images/IMG_1710.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 51"><img src="images/IMG_1783.JPG" alt="Cole and Bridget — Just engaged" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 52"><img src="images/IMG_1779 2.JPG" alt="Cole and Bridget — Just engaged" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 53"><img src="images/IMG_1771.JPG" alt="Cole and Bridget — Walking in the grass" width="1529" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 54"><img src="images/IMG_1773.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 55"><img src="images/IMG_1719.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 56"><img src="images/IMG_1706.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 57"><img src="images/IMG_1771 2.JPG" alt="Cole and Bridget — Proposal moment" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 58"><img src="images/IMG_1804.jpg" alt="Cole and Bridget — In the sand" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 59"><img src="images/IMG_1781 2.JPG" alt="Cole and Bridget — Proposal moment" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 60"><img src="images/IMG_1707.JPG" alt="Cole and Bridget — Hugging" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 61"><img src="images/IMG_1284.jpeg" alt="Cole and Bridget — Champagne" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 62"><img src="images/IMG_1789 2.jpg" alt="Cole and Bridget — Pouring campagne" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 63"><img src="images/IMG_1737.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 64"><img src="images/IMG_1736.JPG" alt="Cole and Bridget — Cole kissing Bridget" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 65"><img src="images/IMG_1787 2.jpg" alt="Cole and Bridget — Eye contact" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 66"><img src="images/IMG_1802.jpg" alt="Cole and Bridget — The proposal moment" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 67"><img src="images/IMG_1807.jpg" alt="Cole and Bridget — In the sand" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 68"><img src="images/IMG_1805.jpg" alt="Cole and Bridget — In the sand" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 69"><img src="images/IMG_1711 2.JPG" alt="Cole and Bridget — Running through the grass" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 70"><img src="images/IMG_1792.jpg" alt="Cole and Bridget — With champagne" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 71"><img src="images/IMG_1753.JPG" alt="Cole and Bridget — Running through the grass" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 72"><img src="images/IMG_1780.JPG" alt="Cole and Bridget — Champagne" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 73"><img src="images/IMG_1784.JPG" alt="Cole and Bridget — Landscape holding hands" width="2400" height="1631" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 74"><img src="images/IMG_1772.JPG" alt="Cole and Bridget — Looking at ring" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 75"><img src="images/IMG_1746.JPG" alt="Cole and Bridget — Playing on the beach" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 76"><img src="images/IMG_1751.JPG" alt="Cole and Bridget — Hugging" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 77"><img src="images/IMG_1739.JPG" alt="Cole and Bridget — Landscape holding hands" width="2400" height="1693" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 78"><img src="images/IMG_1718.JPG" alt="Cole and Bridget — Holding hands on the beach" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 79"><img src="images/IMG_1791.jpg" alt="Cole and Bridget — Laughing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 80"><img src="images/IMG_1163.JPG" alt="Cole and Bridget — Pouring champagne" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 81"><img src="images/IMG_1748.JPG" alt="Cole and Bridget — Close" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 82"><img src="images/IMG_1797.jpg" alt="Cole and Bridget — Eye contact" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 83"><img src="images/IMG_1720.JPG" alt="Cole and Bridget — Smiling together" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 84"><img src="images/IMG_1784 2.JPG" alt="Cole and Bridget — On the beach" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 85"><img src="images/IMG_1798.jpg" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 86"><img src="images/IMG_1775.JPG" alt="Cole and Bridget — Proposal moment" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 87"><img src="images/IMG_1732 2.JPG" alt="Cole and Bridget — Hugging" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 88"><img src="images/IMG_1704.JPG" alt="Cole and Bridget — Dancing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 89"><img src="images/IMG_1786.jpg" alt="Cole and Bridget — Holding hands" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 90"><img src="images/IMG_1781.JPG" alt="Cole and Bridget — Holding hands out of focus" width="1707" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 91"><img src="images/IMG_1722.JPG" alt="Cole and Bridget — Smiling" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 92"><img src="images/IMG_1725.JPG" alt="Cole and Bridget — Dancing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 93"><img src="images/IMG_1776.JPG" alt="Cole and Bridget — Close" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 94"><img src="images/IMG_1803.jpg" alt="Cole and Bridget — Looking at the ring" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 95"><img src="images/IMG_1785.JPG" alt="Cole and Bridget — Selfie" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 96"><img src="images/IMG_1747.JPG" alt="Cole and Bridget — In the grass" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 97"><img src="images/IMG_1782.JPG" alt="Cole and Bridget — Engagement ring moment" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 98"><img src="images/IMG_1716.JPG" alt="Cole and Bridget — Dancing" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 99"><img src="images/IMG_1711.JPG" alt="Cole and Bridget — Running through the dunes" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 100"><img src="images/IMG_1742.JPG" alt="Cole and Bridget — On the beach" width="1600" height="2400" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 101"><img src="images/IMG_1741.JPG" alt="Cole and Bridget — Smiling in the grass" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 102"><img src="images/IMG_1726.JPG" alt="Cole and Bridget — Bridget looking at cole" width="2400" height="1600" loading="lazy"></button>
+            <button class="gallery-tile gallery-page-tile" type="button" aria-label="Open engagement photo 103"><img src="images/HERO2.jpg" alt="Cole and Bridget — Cheers" width="2048" height="1365" loading="lazy"></button>
+
+        </section>
+
+
+        <!-- Wedding photos will be added after the wedding, for noe this is just a placeholder -->
+        <section class="gallery-wedding" id="wedding-gallery" aria-label="Wedding photographs" hidden>
+            <h2>Wedding photos from the big day!</h2>
+            <p>We'll share photographs from our wedding here when we get them!</p>
+        </section>
+
+
+        <!-- More to see -->
+        <section class="gallery-more" aria-labelledby="gallery-more-title">
+            <p class="eyebrow gallery-more-kicker" id="gallery-more-title">More to see</p>
+            <p class="gallery-more-description">Our wedding photos will be added here after the wedding. Until then, explore the rest of our website.</p>
+            <a class="gallery-back" href="index.html">Back to Home</a>
+        </section>
+
+        
+
+    </main>
+
+    <!-- popup image viewer - same as home page  -->
+    <dialog class="image-lightbox" id="image-lightbox" aria-label="Gallery image viewer">
+        <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+        <button class="lightbox-prev" type="button" aria-label="Previous image">←</button>
+        <figure>
+            <img class="lightbox-image" alt="">
+        </figure>
+        <button class="lightbox-next" type="button" aria-label="Next image">→</button>
+    </dialog>
+
+
+    <!-- Footer -->
+    <footer class="site-footer" id="site-footer">
+        <a class="footer-logo" href="index.html" aria-label="Back to home"><img src="images/favicon.png" alt="" width="52" height="52"></a>
+
+        <div class="footer-grid">
+            <div>
+                <p class="eyebrow footer-kicker">Let's celebrate</p>
+                <p class="footer-script">Cole &amp; Bridget</p>
+            </div>
+
+            <div>
+                <p class="eyebrow footer-kicker">Get in touch</p>
+                <a href="contact.html">Questions for us?</a>
+                <a href="mailto:itsthekruegers@gmail.com">itsthekruegers@gmail.com</a>
+            </div>
+
+            <div>
+                <p class="eyebrow footer-kicker">Quick links</p>
+                <a href="rsvp.html">RSVP</a>
+                <a href="gallery.html">Photos</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 The Kruegers</span>
+            <span>Website by Bridget LaPorte</span>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
