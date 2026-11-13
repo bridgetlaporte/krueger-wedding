@@ -1397,6 +1397,64 @@ Our Story Page
 }
 
 
+/*------------- Story sections---------------*/
+.story-page-section{
+    display: grid;
+    gap: 2rem;
+    padding: 4.25rem 1rem;
+    background-color: var(--soft-white);
+    color: var(--near-black);
+}
+
+.story-page-photo{
+    height: 440px;
+    overflow: hidden;
+}
+
+.story-page-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.9s ease, transform 1.3s ease;
+}
+
+.story-page-photo:hover img{
+    transform: scale(1.025);
+}
+
+.story-page-copy{
+    align-self: center;
+}
+
+.story-page-section-kicker{
+    margin-bottom: 1rem;
+    color: var(--brick-brown);
+    font-size: 0.7rem;
+}
+
+.story-page-section-title{
+    margin-bottom: 2rem;
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    line-height: 1;
+}
+
+.story-page-section-title span{
+    display: block;
+    font-family: var(--font-script);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 0.85;
+    color: #6D695B;
+}
+
+.story-page-text{
+    max-width: 36rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-editorial);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
 
 
 
@@ -1568,6 +1626,19 @@ Tablet
     .story-page-hero{
         height: 440px;
     }
+
+
+    /* Story Sections */
+    .story-page-section{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 5.5rem 2rem;
+    }
+
+    .story-page-photo{
+        height: 540px;
+    }
+
 
 
 
@@ -1825,6 +1896,19 @@ Desktop
     .story-page-hero{
         height: 550px;
     }
+
+
+    /* Story sections */
+    .story-page-section{
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(3rem, 7vw, 8rem);
+        padding: 7rem clamp(3rem, 6vw, 7rem);
+    }
+
+    .story-page-photo{
+        height: 690px;
+    }
+
 
 
 
