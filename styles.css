@@ -134,7 +134,6 @@ Global styles
 html{
     scroll-behavior: smooth;
     background-color: var(--soft-white);
-    scrollbar-gutter: stable; /*stops the weird jump to the left*/
 }
 
 body{
@@ -1628,7 +1627,7 @@ Tablet
     }
 
     .header-inner{
-        padding: 0 1.5rem;
+        padding: 0 2rem;
     }
 
     .home-hero{
@@ -1848,7 +1847,7 @@ Desktop
     }
 
     .header-inner{
-        padding: 0 2rem;
+        padding: 0 clamp(3rem, 6vw, 7rem);
     }
 
     
