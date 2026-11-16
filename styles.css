@@ -412,6 +412,74 @@ Mobile Nav Menu POPUP, NOT BUTTON
 }
 
 
+/*-----------------------------------------------------------
+Footer
+-------------------------------------------------------------*/
+.site-footer{
+    padding: 3.5rem 1rem 1rem;
+    background-color: var(--olive-gray);
+    color: var(--soft-white);
+}
+
+.footer-logo img{
+    width: 52px;
+    height: 52px;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.footer-grid{
+    display: grid;
+    gap: 2rem;
+    padding: 1.5rem 0 2.5rem;
+}
+
+.footer-grid > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-kicker{
+    margin-bottom: 1.4rem;
+    color: #E5D9A9;
+    font-size: 0.7rem;
+}
+
+.footer-script{
+    margin-bottom: 0;
+    font-family: var(--font-script);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.footer-grid a{
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--soft-white);
+    font-family: var(--font-editorial);
+    font-size: 1.25rem;
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+.footer-grid a:hover{
+    color: #E5D9A9;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(229,217,169,0.25);
+    font-family: var(--font-sans);
+    font-size: 0.55rem;
+    letter-spacing: 0.14em;
+}
+
 
 /*----------------------------------------------------------------------------------------------------------
 
@@ -1074,73 +1142,7 @@ home - Invite Card
 }
 
 
-/*-----------------------------------------------------------
-Footer
--------------------------------------------------------------*/
-.site-footer{
-    padding: 3.5rem 1rem 1rem;
-    background-color: var(--olive-gray);
-    color: var(--soft-white);
-}
 
-.footer-logo img{
-    width: 52px;
-    height: 52px;
-    filter: brightness(0) invert(1);
-    opacity: 0.8;
-}
-
-.footer-grid{
-    display: grid;
-    gap: 2rem;
-    padding: 1.5rem 0 2.5rem;
-}
-
-.footer-grid > div{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer-kicker{
-    margin-bottom: 1.4rem;
-    color: #E5D9A9;
-    font-size: 0.7rem;
-}
-
-.footer-script{
-    margin-bottom: 0;
-    font-family: var(--font-script);
-    font-size: 3rem;
-    line-height: 1;
-}
-
-.footer-grid a{
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--soft-white);
-    font-family: var(--font-editorial);
-    font-size: 1.25rem;
-    line-height: 1.35;
-    text-decoration: none;
-}
-
-.footer-grid a:hover{
-    color: #E5D9A9;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
-
-.footer-bottom{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(229,217,169,0.25);
-    font-family: var(--font-sans);
-    font-size: 0.55rem;
-    letter-spacing: 0.14em;
-}
 
 
 
@@ -1671,6 +1673,25 @@ Tablet
         font-size: .7rem;
     }
 
+    /* Footer -------------------------------------------------------*/
+    .site-footer{
+        padding: 3.5rem clamp(2.5rem, 6vw, 5rem) 1.25rem;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1.05fr 1.2fr 0.75fr;
+        gap: 1.5rem;
+    }
+
+    .footer-script{
+        font-size: 2.25rem;
+    }
+
+    .footer-bottom{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 
     /* home --------------------------------------------------------- */
     /* home - Our Story */
@@ -1726,15 +1747,6 @@ Tablet
         padding: 4rem 3rem;
     }
 
-    /* Footer */
-    .footer-grid{
-        grid-template-columns: 1.2fr 1fr 1fr;
-    }
-
-    .footer-bottom{
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
 
 
@@ -1811,7 +1823,11 @@ Tablet
 
     /* Temp Registry Page ------------------------------------------*/
     .registry-page{
-        padding: 5.5rem 2rem 6.5rem;
+        padding: 5.5rem 3rem 6.5rem;
+    }
+
+    .registry-content{
+        max-width: 680px;
     }
 
 
@@ -1914,6 +1930,25 @@ Desktop
         width: 40px;
         height: 40px;
     }
+
+
+    /* Footer ---------------------------------------------*/
+    .site-footer{
+        padding: 4.5rem clamp(3rem, 6vw, 7rem) 1.25rem;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .footer-script{
+        font-size: 3rem;
+    }
+
+
+
+    /* Home ---------------------------------------------*/
 
     .home-hero{
         height: 853px;
@@ -2019,10 +2054,7 @@ Desktop
         padding: 5rem 4rem;
     }
 
-    /* Footer ---------------------------------------------*/
-    .site-footer{
-        padding: 4.5rem clamp(3rem, 6vw, 7rem) 1.25rem;
-    }
+
 
 
 
@@ -2102,6 +2134,10 @@ Desktop
     /* Temp Registry Page ------------------------------------------*/
     .registry-page{
         padding: 7rem clamp(3rem, 6vw, 7rem);
+    }
+
+    .registry-content{
+        max-width: 760px;
     }
 
     .registry-title{
