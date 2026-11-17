@@ -123,6 +123,9 @@ root styles from the figma wireframe and planning
     /* figma reuse things */
     --radius: 2px;
     --header-height: 74px;
+
+    --content-width: 1500px;
+    --content-gutter: 1rem;
 }
 
 
@@ -181,6 +184,17 @@ h2{
 }
 
 
+/* fix for the butter spacing */
+.container{
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding-left: var(--content-gutter);
+    padding-right: var(--content-gutter);
+}
+
+
+
 .eyebrow{
     font-family: var(--font-sans);
     font-size: .8rem;
@@ -215,7 +229,6 @@ Header and nav - mobile first
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    padding: 0 1rem;
 }
 
 /* makes sure large nav is hidden on mobile */
@@ -415,7 +428,7 @@ Mobile Nav Menu POPUP, NOT BUTTON
 Footer
 -------------------------------------------------------------*/
 .site-footer{
-    padding: 3.5rem 1rem 1rem;
+    padding: 3.5rem 0 1rem;
     background-color: var(--olive-gray);
     color: var(--soft-white);
 }
@@ -650,7 +663,8 @@ home - Our Story
 .home-story{
     display: grid;
     gap: 2rem;
-    padding: 4.25rem 1rem;
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
     background-color: var(--soft-white);
     color: var(--near-black);
 }
@@ -764,11 +778,14 @@ home - Our Story
 home - Wedding Details
 -------------------------------------------------------------*/
 .home-details{
-    display: grid;
-    gap: 2rem;
-    padding: 4.25rem 1rem;
+    padding: 4.25rem 0;
     background-color: #88807B;
     color: var(--soft-white);
+}
+
+.details-layout{
+    display: grid;
+    gap: 2rem;
 }
 
 .details-content{
@@ -864,7 +881,8 @@ home - Wedding Details
 home - Photo Gallery
 -------------------------------------------------------------*/
 .home-gallery{
-    padding: 4.25rem 1rem;
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
     background-color: var(--soft-white);
     color: var(--near-black);
 }
@@ -1154,7 +1172,8 @@ Gallery Page
 .gallery-page-intro{
     display: grid;
     gap: 2rem;
-    padding: 4.25rem 1rem 2.5rem;
+    padding-top: 4.25rem;
+    padding-bottom: 2.5rem;
     background-color: var(--soft-white);
 }
 
@@ -1233,7 +1252,6 @@ Gallery Page
 .gallery-page-grid{
     columns: 2;
     column-gap: 0.5rem;
-    margin: 0 1rem;
     padding: 1.5rem 0 4rem;
     border-top: 1px solid var(--stone-nude);
     border-bottom: 1px solid var(--stone-nude);
@@ -1269,7 +1287,7 @@ Gallery Page
 }
 
 .gallery-wedding{
-    padding: 5rem 1rem;
+    padding: 5rem 0;
     text-align: center;
 }
 
@@ -1290,7 +1308,6 @@ Gallery Page
 Gallery - more to See
 -------------------------------------------------------------*/
 .gallery-more{
-    margin: 0 1rem;
     padding: 3rem 0 5rem;
 }
 
@@ -1341,7 +1358,8 @@ Our Story Page
 -------------------------------------------------------------*/
 
 .story-page-intro{
-    padding: 4.25rem 1rem 3rem;
+    padding-top: 4.25rem;
+    padding-bottom: 3rem;
     background-color: var(--soft-white);
 }
 
@@ -1400,11 +1418,14 @@ Our Story Page
 
 /*------------- Story sections---------------*/
 .story-page-section{
-    display: grid;
-    gap: 2rem;
-    padding: 4.25rem 1rem;
+    padding: 4.25rem 0;
     background-color: var(--soft-white);
     color: var(--near-black);
+}
+
+.story-page-layout{
+    display: grid;
+    gap: 2rem;
 }
 
 .story-page-photo{
@@ -1459,7 +1480,7 @@ Our Story Page
 
 /*---------Years Between------------*/
 .story-years{
-    padding: 0 1rem 4.25rem;
+    padding-bottom: 4.25rem;
     background-color: var(--soft-white);
 }
 
@@ -1554,7 +1575,7 @@ Temp Registry Page
     display: flex;
     align-items: center;
     min-height: 65vh;
-    padding: 4.25rem 1rem 5rem;
+    padding: 4.25rem 0 5rem;
     background-color: var(--soft-white);
 }
 
@@ -1624,10 +1645,12 @@ Tablet
 @media (min-width: 700px){
     :root{
         --header-height: 84px;
+        --content-gutter: clamp(2.5rem, 6vw, 5rem);
     }
 
-    .header-inner{
-        padding: 0 2rem;
+    .mobile-menu-inner{
+        padding-left: var(--content-gutter);
+        padding-right: var(--content-gutter);
     }
 
     .home-hero{
@@ -1674,7 +1697,7 @@ Tablet
 
     /* Footer -------------------------------------------------------*/
     .site-footer{
-        padding: 3.5rem clamp(2.5rem, 6vw, 5rem) 1.25rem;
+        padding: 3.5rem 0 1.25rem;
     }
 
     .footer-grid{
@@ -1695,8 +1718,9 @@ Tablet
     /* home --------------------------------------------------------- */
     /* home - Our Story */
     .home-story{
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
         grid-template-columns: 1fr 1fr;
-        padding: 5.5rem 2rem;
     }
 
     .story-photo{
@@ -1711,8 +1735,11 @@ Tablet
 
     /* home - Wedding Details */
     .home-details{
+        padding: 5.5rem 0;
+    }
+
+    .details-layout{
         grid-template-columns: 0.85fr 1.15fr;
-        padding: 5.5rem 2rem;
     }
 
     .details-content{
@@ -1727,7 +1754,8 @@ Tablet
 
     /* home - Photo Gallery */
     .home-gallery{
-        padding: 5.5rem 2rem;
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
     }
 
     .gallery-grid{
@@ -1753,13 +1781,14 @@ Tablet
     .gallery-page-intro{
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 5.5rem 2rem 3rem;
+        padding-top: 5.5rem;
+        padding-bottom: 3rem;
     }
 
     .gallery-page-grid{
         columns: 3;
         column-gap: 0.8rem;
-        padding: 2rem 2rem 5rem;
+        padding: 2rem 0 5rem;
     }
 
     .gallery-page-grid .gallery-page-tile{
@@ -1767,11 +1796,10 @@ Tablet
     }
 
     .gallery-wedding{
-        padding: 6rem 2rem;
+        padding: 6rem 0;
     }
 
     .gallery-more{
-        margin: 0 2rem;
         padding: 3rem 0 6rem;
     }
     .gallery-page-kicker {
@@ -1782,7 +1810,8 @@ Tablet
 
     /* Our Story Page ------------------------------------------*/
     .story-page-intro{
-        padding: 5.5rem 2rem 3rem;
+        padding-top: 5.5rem;
+        padding-bottom: 3rem;
     }
 
     .story-page-hero{
@@ -1792,9 +1821,12 @@ Tablet
 
     /* Story Sections */
     .story-page-section{
+        padding: 5.5rem 0;
+    }
+
+    .story-page-layout{
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
-        padding: 5.5rem 2rem;
     }
 
     .story-page-photo{
@@ -1802,7 +1834,7 @@ Tablet
     }
 
     .story-years{
-        padding: 0  2rem 5.5rem;
+        padding-bottom: 5.5rem;
     }
 
     .story-years-grid{
@@ -1822,7 +1854,7 @@ Tablet
 
     /* Temp Registry Page ------------------------------------------*/
     .registry-page{
-        padding: 5.5rem 3rem 6.5rem;
+        padding: 5.5rem 0 6.5rem;
     }
 
     .registry-content{
@@ -1844,13 +1876,9 @@ Desktop
 
     :root{
         --header-height: 96px;
+        --content-gutter: clamp(3rem, 6vw, 7rem);
     }
-
-    .header-inner{
-        padding: 0 clamp(3rem, 6vw, 7rem);
-    }
-
-    
+   
     
     
     /* unhides desktop navigation */
@@ -1933,7 +1961,7 @@ Desktop
 
     /* Footer ---------------------------------------------*/
     .site-footer{
-        padding: 4.5rem clamp(3rem, 6vw, 7rem) 1.25rem;
+        padding: 4.5rem 0 1.25rem;
     }
 
     .footer-grid{
@@ -1993,9 +2021,10 @@ Desktop
 
     /* home - Our Story */
     .home-story{
+        padding-top: 7rem;
+        padding-bottom: 7rem;
         grid-template-columns: 1.1fr .9fr;
         gap: clamp(4rem, 9vw, 10rem);
-        padding: 7rem clamp(3rem, 6vw, 7rem);
     }
 
     .story-photo{
@@ -2009,9 +2038,12 @@ Desktop
 
     /* home - Wedding Details */
     .home-details{
-        grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+        padding: 7rem 0;
+    }
+
+    .details-layout{
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
         gap: 3rem;
-        padding: 7rem clamp(3rem, 6vw, 7rem);
     }
 
     .details-content{
@@ -2032,7 +2064,8 @@ Desktop
 
     /* home - Photo Gallery */
     .home-gallery{
-        padding: 7rem clamp(3rem, 6vw, 7rem);
+        padding-top: 7rem;
+        padding-bottom: 7rem;
     }
 
     .gallery-grid{
@@ -2060,7 +2093,8 @@ Desktop
     /* Gallery Page ---------------------------------------------*/
     .gallery-page-intro{
         gap: 2rem;
-        padding: 7rem clamp(3rem, 6vw, 7rem) 3.5rem;
+        padding-top: 7rem;
+        padding-bottom: 3.5rem;
     }
 
     .gallery-page-title{
@@ -2071,7 +2105,7 @@ Desktop
     .gallery-page-grid{
         columns: 4;
         column-gap: 1rem;
-        padding: 2.5rem clamp(3rem, 6vw, 7rem) 7rem;
+        padding: 2.5rem 0 7rem;
     }
 
     .gallery-page-grid .gallery-page-tile{
@@ -2079,7 +2113,6 @@ Desktop
     }
 
     .gallery-more{
-        margin: 0 clamp(3rem, 6vw, 7rem);
         padding: 3.5rem 0 7rem;
     }
 
@@ -2091,7 +2124,8 @@ Desktop
 
     /* Our Story Page ------------------------------------------*/
     .story-page-intro{
-        padding: 7rem clamp(3rem, 6vw, 7rem) 3.5rem;
+        padding-top: 7rem;
+        padding-bottom: 3.5rem;
     }
 
     .story-page-title{
@@ -2105,9 +2139,12 @@ Desktop
 
     /* Story sections */
     .story-page-section{
+        padding: 7rem 0;
+    }
+
+    .story-page-layout{
         grid-template-columns: 1.1fr 0.9fr;
         gap: clamp(3rem, 7vw, 8rem);
-        padding: 7rem clamp(3rem, 6vw, 7rem);
     }
 
     .story-page-photo{
@@ -2116,14 +2153,14 @@ Desktop
 
 
     .story-years{
-        padding: 0 clamp(3rem, 6vw, 7rem) 7rem;
+        padding-bottom: 7rem;
     }
 
     .story-years-grid{
         gap: 1.5rem;
     }
 
-    .story-page-reverse{
+    .story-page-reverse .story-page-layout{
         grid-template-columns: 0.9fr 1.1fr;
     }
 
@@ -2132,7 +2169,7 @@ Desktop
 
     /* Temp Registry Page ------------------------------------------*/
     .registry-page{
-        padding: 7rem clamp(3rem, 6vw, 7rem);
+        padding: 7rem 0;
     }
 
     .registry-content{
