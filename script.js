@@ -149,3 +149,93 @@ if(engagementTab && weddingTab && engagementGallery && weddingGallery){
 }
 
 
+
+
+
+
+
+
+
+    
+// RSVP Form --------------------------------------------------
+const rsvpForm = document.querySelector("#rsvp-form");
+
+if(rsvpForm){
+
+    const attendanceOptions = rsvpForm.querySelectorAll('input[name="attendance"]');
+    const attendingFields = document.querySelector("#rsvp-attending-fields");
+    const guestCount = document.querySelector("#rsvp-guest-count");
+    const additionalGuests = document.querySelector("#rsvp-additional-guests");
+
+    // Makes the  extra fields visible when radio selected for attending
+    // will use code to limit how many guests each invote can permit, but will use sql to do this later. 
+    function updateAttendance(){
+        const selected = rsvpForm.querySelector('input[name="attendance"]:checked');
+
+        if(selected && selected.value === "yes"){
+            attendingFields.hidden = false;
+            guestCount.disabled = false;
+            guestCount.required = true;
+
+            updateGuestFields();
+        } else {
+            attendingFields.hidden = true;
+            guestCount.disabled = true;
+            guestCount.required = false;
+            guestCount.value = "";
+            additionalGuests.innerHTML = "";
+        }
+    }
+
+    // Creates the name sections for additional guests
+    function updateGuestFields(){
+
+        // Keeps existing names when the number changes to update with person filling out- may change to precontain gueests with code but not now due to unknown guest lists
+        const previousInputs = additionalGuests.querySelectorAll("input");
+        const previousNames = [];
+
+        for(let i = 0; i < previousInputs.length; i++){
+            previousNames.push(previousInputs[i].value);
+        }
+
+        additionalGuests.innerHTML = "";
+
+        const count = Number(guestCount.value);
+
+        // needs to start at 2 or person filling it out not counted. Fixes the number issue 
+        for(let i = 2; i <= count; i++){
+            const field = document.createElement("div");
+            field.classList.add("rsvp-field");
+
+            const label = document.createElement("label");
+            label.setAttribute("for", "rsvp-guest-" + i);
+            label.textContent = "Guest " + i + " Full Name";
+
+            const input = document.createElement("input");
+            input.type = "text";
+            input.id = "rsvp-guest-" + i;
+            input.name = "additional-guest";
+            input.placeholder = "Full name";
+            input.maxLength = 100;
+            input.required = true;
+            // restores first name to not reenter 
+            input.value = previousNames[i - 2] || "";
+
+            field.appendChild(label);
+            field.appendChild(input);
+            additionalGuests.appendChild(field);
+        }
+    }
+
+    // Updates when attendance changed
+    for(let i = 0; i < attendanceOptions.length; i++){
+        attendanceOptions[i].addEventListener("change", updateAttendance);
+    }
+
+    // Updates when the guest count is changed
+    guestCount.addEventListener("change", updateGuestFields);
+
+    updateAttendance();
+}
+
+

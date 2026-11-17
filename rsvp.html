@@ -84,6 +84,216 @@
 
     <main id="main-content">
 
+        <!-- RSVP Intro -->
+        <section class="rsvp-intro" aria-labelledby="rsvp-title">
+
+            <div class="rsvp-intro-layout container">
+
+                <div class="rsvp-intro-content">
+                    <p class="eyebrow rsvp-kicker">Kindly Reply</p>
+                    <h1 class="rsvp-title" id="rsvp-title">Will you be<span>  joining us?</span></h1>
+                    <p class="rsvp-description">We can't wait to celebrate our wedding with our favorite people! Please let us know if you will join us for the celebration!</p>
+                </div>
+
+                <div class="rsvp-intro-photo">
+                    <img src="images/IMG_1720.JPG"alt="Cole and Bridget looking at one another in the grass in front of morro rock">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Wedding Info -->
+        <section class="rsvp-event" aria-labelledby="rsvp-event-title">
+
+            <div class="container">
+
+                <div class="rsvp-event-layout">
+
+                    <div class="rsvp-event-content">
+                        <p class="eyebrow rsvp-event-kicker">Details</p>
+                        <h2 class="rsvp-event-title" id="rsvp-event-title">The Kruegers</h2>
+                        <p class="rsvp-event-date"><time datetime="2028-08-18">August 18, 2028</time></p>
+                        <p class="rsvp-event-description">Our wedding is still a ways away, and we haven't quite finalized the details. As the day approaches, we'll provide everything you need for the venue, schedule, and celebration!</p>
+                    </div>
+
+                    <div class="rsvp-event-card">
+                        <p class="eyebrow rsvp-event-kicker">Before you respond</p>
+                        <h3>Need more info?</h3>
+                        <p>Our Wedding Details page will house all the important information about the anticipated schedule, location, travel, accommodations, updates, and more.</p>
+                        <a class="gallery-back" href="details.html">Wedding Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RSVP FORM-->
+        <section class="rsvp-form-section" aria-labelledby="rsvp-form-title">
+
+            <div class="container">
+
+                <div class="rsvp-form-heading">
+                    <p class="eyebrow rsvp-form-kicker">RSVP Form</p>
+                    <h2 id="rsvp-form-title">Will You Join Us?</h2>
+                    <p>Please submit one response for your entire party. Use the personalized invitation code provided on your printed wedding invitation to let us know who will be coming!</p>
+                </div>
+
+                <form class="rsvp-form" id="rsvp-form">
+
+                    <!-- Invitation Info -->
+                    <div class="rsvp-field">
+                        <label for="rsvp-code">Invite Code</label>
+                        <input type="text" id="rsvp-code" name="invitation-code" placeholder="Enter the code on your invitation" maxlength="24" autocomplete="off" required>
+                        <p class="rsvp-field-note">Your invitation code will help us find your party and confirm the number of invited guests.</p>
+                    </div>
+
+
+
+
+                    <!-- Contact Information -->
+                    <div class="rsvp-fields-row">
+
+                        <div class="rsvp-field">
+                            <label for="rsvp-first-name">First Name</label>
+                            <input type="text" id="rsvp-first-name" name="first-name" placeholder="First name" autocomplete="given-name" maxlength="80" required>
+                        </div>
+
+                        <div class="rsvp-field">
+                            <label for="rsvp-last-name">Last Name</label>
+                            <input type="text" id="rsvp-last-name" name="last-name" placeholder="Last name" autocomplete="family-name" maxlength="80" required>
+                        </div>
+
+                    </div>
+
+                    <div class="rsvp-field">
+                        <label for="rsvp-email">Email Address</label>
+                        <input type="email" id="rsvp-email" name="email" placeholder="name@example.com" autocomplete="email" maxlength="254" required>
+                    </div>
+
+                    <div class="rsvp-field">
+                        <label for="rsvp-phone">Phone Number (Optional)</label>
+                        <input type="tel" id="rsvp-phone" name="phone" placeholder="(000) 000-0000" autocomplete="tel" maxlength="30">
+                    </div>
+
+
+
+                    
+                    <!-- Mailing Address -->
+                    <div class="rsvp-field">
+                        <label for="rsvp-address">Street Address</label>
+                        <input type="text" id="rsvp-address" name="address" placeholder="Street address" autocomplete="address-line1" maxlength="150" required>
+                    </div>
+
+                    <div class="rsvp-field">
+                        <label for="rsvp-address-2">Apartment, Suite, etc. (Optional)</label>
+                        <input type="text" id="rsvp-address-2" name="address-2" placeholder="Apartment, unit, or suite" autocomplete="address-line2" maxlength="100">
+                    </div>
+
+                    <div class="rsvp-fields-row">
+
+                        <div class="rsvp-field">
+                            <label for="rsvp-city">City</label>
+                            <input type="text" id="rsvp-city" name="city" placeholder="City" autocomplete="address-level2" maxlength="100" required>
+                        </div>
+
+                        <div class="rsvp-field">
+                            <label for="rsvp-state">State / Province / Region</label>
+                            <input type="text" id="rsvp-state" name="state" placeholder="State or region" autocomplete="address-level1" maxlength="100" required>
+                        </div>
+
+                    </div>
+
+                    <div class="rsvp-fields-row">
+
+                        <div class="rsvp-field">
+                            <label for="rsvp-zip">ZIP / Postal Code</label>
+                            <input type="text" id="rsvp-zip" name="postal-code" placeholder="ZIP or postal code" autocomplete="postal-code" maxlength="20" required>
+                        </div>
+
+                        <div class="rsvp-field">
+                            <label for="rsvp-country">Country</label>
+                            <input type="text" id="rsvp-country" name="country" placeholder="Country" autocomplete="country-name" maxlength="100" required>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- Attendance -->
+                    <fieldset class="rsvp-attendance">
+                        <legend>Will You Be Attending?</legend>
+
+                        <div class="rsvp-choices">
+                            <label class="rsvp-choice">
+                                <input type="radio" name="attendance" value="yes" required>
+                                <span>Yes, Joyfully Accept</span>
+                            </label>
+
+                            <label class="rsvp-choice">
+                                <input type="radio" name="attendance" value="no" required>
+                                <span>No, Respectfully Decline</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+
+
+
+                    <!-- Attending Guests -->
+                    <div class="rsvp-attending-fields" id="rsvp-attending-fields" hidden>
+
+                        <div class="rsvp-field">
+                            <label for="rsvp-guest-count">Number Attending - while we love the people you love, we kindly ask that guests only include names listed on your invite</label>
+                            <select id="rsvp-guest-count" name="guest-count" disabled>
+                                <option value="">Select number of guests (including yourself)</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+
+                        <div id="rsvp-additional-guests"></div>
+
+                    </div>
+
+
+
+
+
+                    <!-- Optional Information -->
+                    <div class="rsvp-field">
+                        <label for="rsvp-song">Song Request (Optional)</label>
+                        <input type="text" id="rsvp-song" name="song-request" placeholder="Reception Song?" maxlength="150">
+                    </div>
+
+                    <div class="rsvp-field">
+                        <label for="rsvp-note">Note to Cole &amp; Bridget (Optional)</label>
+                        <textarea id="rsvp-note" name="note" rows="5" maxlength="1000" placeholder="Anything else you'd like us to know..."></textarea>
+                    </div>
+
+
+                    <button class="rsvp-submit" id="rsvp-submit" type="submit" disabled>RSVP</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+
+
         
 
     </main>
