@@ -1630,6 +1630,242 @@ Temp Registry Page
 
 
 
+
+
+
+/*-----------------------------------------------------------
+
+Contact Page
+
+-------------------------------------------------------------*/
+
+.contact-intro{
+    padding: 4.25rem 0;
+    background-color: var(--soft-white);
+}
+
+.contact-intro-layout{
+    display: grid;
+    gap: 2.5rem;
+}
+
+.contact-intro-content{
+    align-self: center;
+}
+
+.contact-kicker{
+    margin-bottom: 1rem;
+    color: var(--brick-brown);
+    font-size: 0.7rem;
+}
+
+.contact-title{
+    margin-bottom: 2rem;
+    font-size: clamp(3rem, 10vw, 5rem);
+    line-height: 1;
+}
+
+.contact-title span{
+    display: block;
+    font-family: var(--font-script);
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--olive-gray);
+}
+
+.contact-description{
+    max-width: 34rem;
+    margin-bottom: 0;
+    color: var(--olive-gray);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.contact-intro-photo{
+    height: 400px;
+    overflow: hidden;
+}
+
+.contact-intro-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(1);
+    transition: filter 0.9s ease, transform 1.3s ease;
+}
+
+.contact-intro-photo:hover img{
+    filter: grayscale(0.25);
+    transform: scale(1.025);
+}
+
+
+
+/*---- Contact Info ----------------------------------------*/
+.contact-direct{
+    background-color: var(--soft-white);
+}
+
+.contact-direct-layout{
+    display: grid;
+    gap: 2.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-top: 1px solid var(--stone-nude);
+    border-bottom: 1px solid var(--stone-nude);
+}
+
+.contact-section-title{
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.25rem, 7vw, 4rem);
+    line-height: 1.1;
+}
+
+/* rows */
+.contact-methods{
+    display: grid;
+}
+
+.contact-method{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid var(--stone-nude);
+    color: var(--olive-black);
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.contact-method:first-child{
+    border-top: 1px solid var(--stone-nude);
+}
+
+.contact-method-label{
+    grid-column: 1;
+    color: var(--brick-brown);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contact-method-value{
+    grid-column: 1;
+    min-width: 0;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.contact-method-arrow{
+    grid-column: 2;
+    grid-row: 1 / 3;
+    justify-self: end;
+    color: var(--brick-brown);
+    font-size: 1.3rem;
+    transition: transform 0.25s ease;
+}
+
+.contact-method:hover, .contact-method:focus-visible{
+    background-color: #eaebdf;
+    text-decoration: none;
+}
+
+.contact-method:hover .contact-method-arrow, .contact-method:focus-visible .contact-method-arrow{
+    transform: translate(3px, -3px);
+}
+
+.contact-method:focus-visible{
+    outline: 2px solid var(--brick-brown);
+    outline-offset: -2px;
+}
+
+
+
+
+/*--- Contact - Helpful links -------------------------------------*/
+.contact-help{
+    padding: 4.25rem 0 5rem;
+    background-color: var(--soft-white);
+}
+
+.contact-help-grid{
+    display: grid;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.contact-help-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 220px;
+    padding: 1.5rem;
+    border: 1px solid var(--stone-nude);
+    background-color: var(--soft-white);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-help-card h3{
+    margin-bottom: 1rem;
+    color: var(--brick-brown);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contact-help-card p{
+    margin-bottom: 1.5rem;
+    color: var(--olive-gray);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.contact-help-card a{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    color: var(--olive-brown);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contact-help-card a span{
+    transition: transform 0.25s ease;
+}
+
+.contact-help-card:hover{
+    border-color: var(--olive-gray);
+    transform: translateY(-2px);
+}
+
+.contact-help-card:hover a span{
+    transform: translate(3px, -3px);
+}
+
+.contact-help-card a:focus-visible{
+    outline: 2px solid var(--brick-brown);
+    outline-offset: 4px;
+}
+
+
+
 /*-----------------------------------------------------------
 
 RSVP Page
@@ -1763,9 +1999,7 @@ RSVP Page
 }
 
 
-/*-----------------------------------------------------------
-RSVP Page - Form
--------------------------------------------------------------*/
+/*-----RSVP Page - Form-------------------------*/
 .rsvp-form-section{
     padding-top: 2rem;
     padding-bottom: 3rem;
@@ -2183,6 +2417,28 @@ Tablet
 
 
 
+    /* Contact Page ------------------------------------------*/
+    .contact-intro{
+        padding: 5.5rem 0;
+    }
+
+    .contact-intro-layout{
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .contact-intro-photo{
+        height: 480px;
+    }
+
+    .contact-direct-layout{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .contact-help{
+        padding: 5.5rem 0 6rem;
+    }
+
 
     
     
@@ -2540,6 +2796,63 @@ Desktop
 
 
 
+
+    /* Contact Page ------------------------------------------*/
+    .contact-intro{
+        padding: 7rem 0;
+    }
+
+    .contact-intro-layout{
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+        gap: clamp(3rem, 7vw, 8rem);
+    }
+
+    .contact-intro-photo{
+        height: 560px;
+    }
+
+    .contact-direct-layout{
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(3rem, 7vw, 8rem);
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    
+    .contact-method{
+        grid-template-columns: minmax(80px, 0.5fr) minmax(0, 1.5fr) auto;
+        gap: 1rem;
+    }
+
+    .contact-method-label{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .contact-method-value{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .contact-method-arrow{
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+
+    .contact-help{
+        padding: 7rem 0;
+    }
+
+    .contact-help-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .contact-help-card{
+        min-height: 235px;
+        padding: 2rem;
+    }
 
 
 
