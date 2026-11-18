@@ -159,6 +159,7 @@ p{
 h1, h2, h3{
     font-family: var(--font-display);
     font-weight: 400;
+    font-variation-settings: "opsz" 24;
     line-height: 1;
 }
 
@@ -552,8 +553,8 @@ Home Hero - mobile
 /* text over hero */
 .hero-content{
     position: absolute;
-    top: 33%;
-    left: 0;
+    top: 34%;
+    left: 5px;
     width: 100%;
     padding: 0 1rem;
     transform: translateY(-50%);
@@ -565,7 +566,7 @@ Home Hero - mobile
 .hero-title{
     font-family: var(--font-script);
     font-weight: 400;
-    font-size: clamp(38px, 11vw, 54px);
+    font-size: clamp(34px, 15vw, 54px);
     line-height: 1;
     white-space: nowrap;
     position:relative;
@@ -573,11 +574,11 @@ Home Hero - mobile
 }
 
 .hero-date{
-    margin-top: 12px;
+    margin-top: 11px;
     margin-bottom: 0;
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 3px;
 }
 
@@ -707,15 +708,17 @@ home - Our Story
     font-size: clamp(2rem, 10vw, 5rem);
     line-height: 1;
     color: var(--near-black);
+    font-optical-sizing: none;
+    font-variation-settings: "opsz" 24;
 }
 
 .story-script{
     display: block;
     font-family: var(--font-script);
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 400;
     line-height: 0.85;
-    color: #6D695B;
+    color: var(--olive-gray);
 }
 
 /* paragraph */
@@ -723,9 +726,9 @@ home - Our Story
     max-width: 36rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    font-family: var(--font-editorial);
-    font-size: 1.1rem;
-    line-height: 1.45;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
     color: var(--near-black);
 }
 
@@ -779,8 +782,8 @@ home - Wedding Details
 -------------------------------------------------------------*/
 .home-details{
     padding: 4.25rem 0;
-    background-color: #88807B;
-    color: var(--soft-white);
+    background-color: var(--soft-white);
+    color: var(--olive-black);
 }
 
 .details-layout{
@@ -809,15 +812,15 @@ home - Wedding Details
     font-size: 1.17em;
     font-weight: 400;
     line-height: 0.8;
-    color: #E5D9A9;
+    color: var(--brick-brown);
 }
 
 .details-description{
     max-width: 34rem;
     margin-bottom: 1.5rem;
-    font-family: var(--font-editorial);
-    font-size: 1.1rem;
-    line-height: 1.55;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 
@@ -827,7 +830,7 @@ home - Wedding Details
     gap: 0.65rem;
     position: relative;
     min-height: 46px;
-    color: var(--soft-white);
+    color: var(--olive-black);
     font-family: var(--font-sans);
     font-size: 0.65rem;
     letter-spacing: 0.14em;
@@ -842,7 +845,7 @@ home - Wedding Details
     bottom: 0.4rem;
     width: 2rem;
     height: 1px;
-    background-color: var(--soft-white);
+    background-color: var(--brick-brown);
     transition: width 0.25s ease;
 }
 
@@ -905,7 +908,7 @@ home - Photo Gallery
 .gallery-script{
     font-family: var(--font-script);
     font-size: 1.1em;
-    color: #6D695B;
+    color: var(--olive-gray);
 }
 
 
@@ -1127,8 +1130,8 @@ home - Invite Card
 
 .invite-description{
     margin-bottom: 0;
-    font-family: var(--font-editorial);
-    font-size: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
     color: var(--charcoal);
 }
 
@@ -1195,7 +1198,7 @@ Gallery Page
     font-size: 1.1em;
     font-weight: 400;
     line-height: 0.9;
-    color: #6D695B;
+    color: var(--olive-gray);
 }
 
 .gallery-page-info{
@@ -1299,8 +1302,9 @@ Gallery Page
 .gallery-wedding p{
     max-width: 30rem;
     margin: auto;
-    font-family: var(--font-editorial);
-    font-size: 1.25rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 
@@ -1391,9 +1395,9 @@ Our Story Page
 .story-page-description{
     max-width: 43rem;
     margin-bottom: 0;
-    font-family: var(--font-editorial);
-    font-size: 1.3rem;
-    line-height: 1.5;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 .story-page-hero{
@@ -1472,8 +1476,8 @@ Our Story Page
 .story-page-text{
     max-width: 36rem;
     margin-bottom: 1rem;
-    font-family: var(--font-editorial);
-    font-size: 1.2rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
     line-height: 1.5;
 }
 
@@ -1492,10 +1496,9 @@ Our Story Page
 .story-years-description{
     max-width: 42rem;
     margin-bottom: 2.5rem;
-    color: var(--olive-gray);
     font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.65;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .story-years-grid{
@@ -1532,16 +1535,16 @@ Our Story Page
 
 /*------- Proposal-Story--------------------*/
 .story-page-reverse{
-    background-color: #88807B;
-    color: var(--soft-white);
+    background-color: var(--soft-white);
+    color: var(--olive-black);
 }
 
 .story-page-reverse .story-page-section-kicker{
-    color: #E5D9A9;
+    color: var(--brick-brown);
 }
 
 .story-page-reverse .story-page-section-title span{
-    color: #E5D9A9;
+    color: var(--olive-gray);
 }
 
 
@@ -1612,9 +1615,9 @@ Temp Registry Page
 .registry-description{
     max-width: 36rem;
     margin-bottom: 1.5rem;
-    font-family: var(--font-editorial);
-    font-size: 1.25rem;
-    line-height: 1.55;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 .registry-content .gallery-back{
@@ -1671,9 +1674,9 @@ RSVP Page
 .rsvp-description{
     max-width: 34rem;
     margin-bottom: 0;
-    font-family: var(--font-editorial);
-    font-size: 1.3rem;
-    line-height: 1.5;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 .rsvp-intro-photo{
@@ -1699,7 +1702,6 @@ RSVP Page
 
 /*-------Wedding Info--------------------*/
 .rsvp-event{
-    padding-bottom: 4.25rem;
     background-color: var(--soft-white);
 }
 
@@ -1737,7 +1739,7 @@ RSVP Page
     margin-bottom: 0;
     color: var(--olive-gray);
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.65;
 }
 
@@ -1765,7 +1767,8 @@ RSVP Page
 RSVP Page - Form
 -------------------------------------------------------------*/
 .rsvp-form-section{
-    padding: 4.25rem 0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     background-color: var(--soft-white);
 }
 
@@ -1972,11 +1975,11 @@ Tablet
     }
 
     .hero-content{
-        top: 32%;
+        top: 34%;
     }
 
     .hero-title{
-        font-size: 85px;
+        font-size: 74px;
     }
 
     .hero-date{
@@ -2202,7 +2205,8 @@ Tablet
 
     /* RSVP Page - Form */
     .rsvp-form-section{
-        padding: 5.5rem 0;
+        padding-top: 0rem;
+        padding-bottom: 3rem;
     }
 
     .rsvp-form{
@@ -2334,11 +2338,11 @@ Desktop
     }
 
     .hero-content{
-        top: 32%;
+        top: 34%;
     }
 
     .hero-title{
-        font-size: 100px;
+        font-size: 90px;
     }
 
     .hero-date{
@@ -2578,7 +2582,8 @@ Desktop
 
     /* RSVP Page - Form */
     .rsvp-form-section{
-        padding: 7rem 0;
+        padding-top: 0rem;
+        padding-bottom: 3rem;
     }
 
 
