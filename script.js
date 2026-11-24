@@ -151,6 +151,16 @@ if(engagementTab && weddingTab && engagementGallery && weddingGallery){
 
 
 
+// FAQ Accordion ------------------------------------------------
+// jQuery UI accordion
+if(document.querySelector("#faqAccordion")){
+    $("#faqAccordion").accordion({
+        active: 0,
+        collapsible: true,
+        heightStyle: "content",
+        icons: false
+    });
+}
 
 
 

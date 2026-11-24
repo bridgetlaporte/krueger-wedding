@@ -14,7 +14,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600&amp;family=Montserrat:wght@400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
 
+    
+    <!-- jQuery UI for FAQ accordion -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js" defer></script>
     <script src="script.js" defer></script>
 
 </head>
@@ -131,6 +137,141 @@
             </div>
 
         </section>
+
+
+        <!-- Weekend Timeline -->
+        <section class="wedding-schedule container" id="weekend-timeline" aria-labelledby="wedding-schedule-title">
+
+            <p class="eyebrow wedding-kicker">Ceremony Schedule</p>
+            <h2 class="wedding-section-title" id="wedding-schedule-title">Wedding Timeline</h2>
+            <p class="wedding-description">Exact times and activities will be updated and provided here as our plans finalize.</p>
+
+            <div class="wedding-schedule-layout">
+
+                <ol class="wedding-timeline">
+
+                    <li>
+                        <span class="wedding-time">TBD</span>
+                        <div>
+                            <h3>Guest Arrival & Transportation</h3>
+                            <p>Arrival and transportation details will be shared closer to the wedding.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="wedding-time">TBD</span>
+                        <div>
+                            <h3>Wedding Ceremony</h3>
+                            <p>The ceremony time and venue location are still being finalized.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="wedding-time">TBD</span>
+                        <div>
+                            <h3>Cocktail Hour</h3>
+                            <p>A cocktail hour will follow the ceremony, details will be added here.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="wedding-time">TBD</span>
+                        <div>
+                            <h3>Reception Party</h3>
+                            <p>Reception celebration details will be announced once confirmed.</p>
+                        </div>
+                    </li>
+
+                </ol>
+
+                <!-- Venue Info -->
+                <aside class="wedding-location">
+                    <p class="eyebrow wedding-card-label">Location</p>
+
+                    <div class="wedding-map-placeholder">A map will be added here once the venue is confirmed.</div>
+
+                    <h3>Venue Name</h3>
+                    <p>We're still working out the details. Once the venue is confirmed, you'll find the address and map here.</p>
+                    <a class="gallery-back" href="contact.html">Questions?</a>
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- Attire -->
+        <section class="wedding-attire container" aria-labelledby="wedding-attire-title">
+
+            <div class="wedding-attire-layout">
+
+                <div class="wedding-attire-content">
+                    <p class="eyebrow wedding-kicker">Wedding Attire</p>
+                    <h2 class="wedding-section-title" id="wedding-attire-title">What to Wear?</h2>
+                    <p class="wedding-description">We havent picked the venue, but August is the target month for our wedding. The plan is garden party formal attire. Wear something colorful, cool, and what you feel good in.</p>
+                </div>
+
+                <div class="wedding-attire-photo">
+                    <img src="images/attire.JPG" alt="Wedding guests in colorful dresses" loading="lazy">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Details - FAQs -->
+        <section class="wedding-faq container" aria-labelledby="wedding-faq-title">
+
+            <p class="eyebrow wedding-kicker">Frequently Asked Questions</p>
+            <h2 class="wedding-section-title" id="wedding-faq-title">Questions, answered.</h2>
+            <p class="wedding-description">We know there's a lot to plan! Here are a few questions we'll be updating as the wedding gets closer.</p>
+
+            <!-- FAQ Accordion -->
+            <div id="faqAccordion">
+
+                <h3>Can I bring a plus-one?</h3>
+                <div>
+                    <p>We love the people you love, but we request that the only people who come are the names listed on your invitation!</p>
+                </div>
+
+                <h3>Are children welcome?</h3>
+                <div>
+                    <p>We love your children, but we request that the only people who come are the names listed on your invitation!</p>
+                </div>
+
+                <h3>What time should I arrive?</h3>
+                <div>
+                    <p>Our ceremony and arrival times haven't been finalized yet. You'll find the full schedule on this page, above, once available.</p>
+                </div>
+
+                <h3>Is there parking at the venue?</h3>
+                <div>
+                    <p>We'll share what we know about parking information and any transportation options once our venue is confirmed.</p>
+                </div>
+
+                <h3>I have another question?</h3>
+                <div>
+                    <p>Feel free to reach out to us through our <a href="contact.html">Contact page</a>! We're here!</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Details - RSVP -->
+        <section class="wedding-response container" aria-labelledby="wedding-response-title">
+
+            <p class="eyebrow wedding-kicker">Coming?</p>
+            <h2 class="wedding-section-title" id="wedding-response-title">RSVP?</h2>
+            <p class="wedding-description">When invitations are sent, you'll be able to visit the RSVP page below to let us know if you can celebrate with us. We hope to see you!</p>
+
+            <a class="gallery-back" href="rsvp.html">RSVP</a>
+
+        </section>
+
+
 
     </main>
 

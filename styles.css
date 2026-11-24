@@ -159,7 +159,7 @@ p{
 h1, h2, h3{
     font-family: var(--font-display);
     font-weight: 400;
-    font-variation-settings: "opsz" 24;
+    font-variation-settings: "opsz" 12;
     line-height: 1;
 }
 
@@ -709,7 +709,7 @@ home - Our Story
     line-height: 1;
     color: var(--near-black);
     font-optical-sizing: none;
-    font-variation-settings: "opsz" 24;
+    font-variation-settings: "opsz" 12;
 }
 
 .story-script{
@@ -804,6 +804,7 @@ home - Wedding Details
     margin: 0.9rem 0 1.25rem;
     font-size: clamp(2.25rem, 10vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .details-script{
@@ -903,6 +904,7 @@ home - Photo Gallery
 .gallery-title{
     margin-bottom: 1rem;
     font-size: clamp(2.25rem, 10vw, 5rem);
+    font-variation-settings: "opsz" 12;
 }
 
 .gallery-script{
@@ -1122,6 +1124,7 @@ home - Invite Card
     line-height: 0.8;
     font-weight: 400;
     color: #807A74;
+    font-variation-settings: "opsz" 12;
 }
 
 .invite-title span{
@@ -1190,6 +1193,7 @@ Gallery Page
 .gallery-page-title{
     font-size: clamp(2.75rem, 11vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .gallery-page-title span{
@@ -1381,6 +1385,7 @@ Our Story Page
     margin-bottom: 2rem;
     font-size: clamp(2.75rem, 10vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .story-page-title span{
@@ -1462,6 +1467,7 @@ Our Story Page
     margin-bottom: 2rem;
     font-size: clamp(2.5rem, 10vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .story-page-section-title span{
@@ -1491,6 +1497,7 @@ Our Story Page
 .story-years-title{
     margin-bottom: 1.25rem;
     font-size: clamp(2.25rem, 8vw, 4.5rem);
+    font-variation-settings: "opsz" 12;
 }
 
 .story-years-description{
@@ -1556,6 +1563,7 @@ Our Story Page
 .story-page-end-title{
     margin-bottom: 1.5rem;
     font-size: clamp(2.5rem, 9vw, 4.5rem);
+    font-variation-settings: "opsz" 12;
 }
 
 .story-page-end-title span{
@@ -1601,6 +1609,7 @@ Temp Registry Page
     margin-bottom: 2rem;
     font-size: clamp(2.75rem, 10vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .registry-title span{
@@ -1650,6 +1659,7 @@ Wedding Details Page
     margin-bottom: 2rem;
     font-size: clamp(3rem, 10vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .wedding-title span{
@@ -1682,6 +1692,7 @@ Wedding Details Page
     margin-bottom: 1.5rem;
     font-size: clamp(2.25rem, 7vw, 4rem);
     line-height: 1.1;
+    font-variation-settings: "opsz" 12;
 }
 
 .wedding-event-grid{
@@ -1727,6 +1738,263 @@ Wedding Details Page
 
 
 
+/* -----------timeline------------ */
+.wedding-schedule{
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+    border-top: 1px solid var(--stone-nude);
+}
+
+.wedding-schedule-layout{
+    display: grid;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.wedding-timeline{
+    list-style: none;
+    padding: 0;
+}
+
+.wedding-timeline li{
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 1.5rem;
+    padding-bottom: 0;
+}
+
+.wedding-timeline li > div{
+    padding: 0 0 2.5rem 1.5rem;
+    border-left: 1px solid var(--stone-nude);
+    position: relative;
+}
+
+.wedding-timeline li:last-child > div{
+    padding-bottom: 0;
+}
+
+.wedding-timeline li > div::before{
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    left: -5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--olive-gray);
+}
+
+.wedding-time{
+    padding-top: 0.25rem;
+    color: var(--olive-gray);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.wedding-timeline h3{
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.wedding-timeline p{
+    max-width: 28rem;
+    margin-bottom: 0;
+    color: var(--olive-gray);
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+
+/* map */
+.wedding-location{
+    align-self: start;
+    padding: 1.5rem;
+    background-color: #E6E4E1;
+}
+
+.wedding-map-placeholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--stone-nude);
+    background-color: #D9D7D3;
+    color: var(--olive-gray);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+.wedding-location h3{
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.wedding-location p:not(.eyebrow){
+    margin-bottom: 1.5rem;
+    color: var(--olive-gray);
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+/* attire ------------------------------  */
+.wedding-attire{
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+    border-top: 1px solid var(--stone-nude);
+}
+
+.wedding-attire-layout{
+    display: grid;
+    gap: 2.5rem;
+}
+
+.wedding-attire-content{
+    align-self: center;
+}
+.wedding-attire-photo{
+    height: 350px;
+    overflow: hidden;
+}
+
+.wedding-attire-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    transition: transform 0.8s ease;
+}
+
+.wedding-attire-photo:hover img{
+    transform: scale(1.025);
+}
+
+/* Travel info ------------------------------- */
+.wedding-travel{
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+    border-top: 1px solid var(--stone-nude);
+}
+
+.wedding-info-grid{
+    display: grid;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.wedding-info-card{
+    padding: 1.5rem;
+    border: 1px solid var(--stone-nude);
+}
+
+.wedding-info-card h3{
+    margin-bottom: 1.25rem;
+    color: var(--brick-brown);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.wedding-info-card p{
+    margin-bottom: 0;
+    color: var(--olive-gray);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+
+/* FAQs---------------------------------------------- */
+.wedding-faq{
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+    border-top: 1px solid var(--stone-nude);
+}
+
+#faqAccordion{
+    margin-top: 2.5rem;
+    border-bottom: 1px solid var(--stone-nude);
+}
+
+#faqAccordion > h3{
+    position: relative;
+    margin: 0;
+    padding: 1.5rem 3rem 1.5rem 0;
+    border: none;
+    border-top: 1px solid var(--stone-nude);
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--olive-black);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+#faqAccordion > h3:hover{
+    color: var(--brick-brown);
+}
+
+#faqAccordion > h3:focus-visible{
+    outline: 2px solid var(--brick-brown);
+    outline-offset: -2px;
+}
+
+#faqAccordion > h3::after{
+    content: "+";
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--brick-brown);
+    font-size: 1.3rem;
+}
+
+#faqAccordion > h3.ui-state-active::after{
+    content: "−";
+}
+
+/* answers */
+#faqAccordion > div{
+    padding: 0 3rem 1.5rem 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--olive-gray);
+    font-family: var(--font-body);
+}
+
+#faqAccordion > div p{
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+#faqAccordion > div a{
+    color: var(--brick-brown);
+    text-underline-offset: 3px;
+}
+
+/* RSVP ----------------------------------------*/
+.wedding-response{
+    padding-top: 4.25rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid var(--stone-nude);
+}
+
+.wedding-response .wedding-description{
+    margin-bottom: 2rem;
+}
+
+
+
 
 
 
@@ -1760,6 +2028,7 @@ Contact Page
     margin-bottom: 2rem;
     font-size: clamp(3rem, 10vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .contact-title span{
@@ -1819,6 +2088,7 @@ Contact Page
     margin-bottom: 1.5rem;
     font-size: clamp(2.25rem, 7vw, 4rem);
     line-height: 1.1;
+    font-variation-settings: "opsz" 12;
 }
 
 /* rows */
@@ -1992,6 +2262,7 @@ RSVP Page
     margin-bottom: 2rem;
     font-size: clamp(3rem, 10vw, 5rem);
     line-height: 1;
+    font-variation-settings: "opsz" 12;
 }
 
 .rsvp-title span{
@@ -2059,6 +2330,7 @@ RSVP Page
 .rsvp-event-title{
     margin-bottom: 1.5rem;
     font-size: clamp(2.25rem, 7vw, 4rem);
+    font-variation-settings: "opsz" 12;
 }
 
 .rsvp-event-date{
@@ -2527,6 +2799,65 @@ Tablet
     }
 
 
+    .wedding-schedule{
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+    }
+
+    .wedding-timeline li{
+        grid-template-columns: 85px minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    .wedding-location{
+        padding: 2rem;
+    }
+
+
+    .wedding-attire, .wedding-travel{
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+    }
+
+    .wedding-attire-photo{
+        height: 450px;
+    }
+
+    .wedding-info-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .wedding-info-card{
+        padding: 2rem;
+    }
+
+    /* Details - FAQ */
+    .wedding-faq{
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+    }
+
+    #faqAccordion > h3{
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+
+    #faqAccordion > div{
+        padding-bottom: 1.75rem;
+    }
+
+    .wedding-response{
+        padding-top: 5.5rem;
+        padding-bottom: 6rem;
+    }
+
+
+
+
+
+
+
 
 
 
@@ -2929,6 +3260,45 @@ Desktop
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.5rem;
     }
+
+    .wedding-schedule{
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .wedding-schedule-layout{
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        gap: clamp(3rem, 7vw, 8rem);
+    }
+
+
+    .wedding-attire, .wedding-travel{
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .wedding-attire-layout{
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(3rem, 7vw, 8rem);
+    }
+
+    .wedding-attire-photo{
+        min-height: 540px;
+    }
+
+    /* Details - FAQ */
+    .wedding-faq{
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .wedding-response{
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+
+
 
 
 
