@@ -42,6 +42,23 @@ async function startServer(){
     }
 }
 
+
+// files for RSVP page
+app.use("/images", express.static(__dirname + "/images"));
+
+app.get("/styles.css", function(req, res){
+    res.sendFile(__dirname + "/styles.css");
+});
+
+app.get("/script.js", function(req, res){
+    res.sendFile(__dirname + "/script.js");
+});
+
+app.get("/rsvp.html", function(req, res){
+    res.sendFile(__dirname + "/rsvp.html");
+});
+
+
 // test
 app.get("/", function(req, res){
     res.send("server is running");

@@ -246,6 +246,65 @@ if(rsvpForm){
     guestCount.addEventListener("change", updateGuestFields);
 
     updateAttendance();
+
+    // submit RSVP to database
+    const submitButton = document.querySelector("#rsvp-submit");
+    const rsvpMessage = document.querySelector("#rsvp-message");
+
+    // allows submission for local server
+    if(window.location.port === "3000"){
+        submitButton.disabled = false;
+    }
+
+    rsvpForm.addEventListener("submit", async function(event){
+        event.preventDefault();
+
+        // gets info from the form
+        const fields = new FormData(rsvpForm);
+
+        const rsvp = {
+            code: fields.get("invitation-code"),
+            firstName: fields.get("first-name"),
+            lastName: fields.get("last-name"),
+            email: fields.get("email"),
+            streetAddress: fields.get("address"),
+            city: fields.get("city"),
+            state: fields.get("state"),
+            postalCode: fields.get("postal-code"),
+            country: fields.get("country"),
+            attendance: fields.get("attendance")
+        };
+
+        submitButton.disabled = true;
+        rsvpMessage.textContent = "Submitting your RSVP...";
+
+        try {
+            // send form infoto Express
+            const response = await fetch("/api/rsvp", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(rsvp)
+            });
+
+            const result = await response.json();
+            rsvpMessage.textContent = result.message;
+
+            if(response.ok){
+                rsvpForm.reset();
+                updateAttendance();
+            } else {
+                submitButton.disabled = false;
+            }
+
+        } catch(error){
+            rsvpMessage.textContent = "Could not connect to the server.";
+            submitButton.disabled = false;
+        }
+    });
+    
+
 }
 
 
+
+    
